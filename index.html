@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Dev</title>
+    <link rel="stylesheet" type="text/css" href="a.css" />
+    <script>
+        function saveFunc(){
+                window.isPlay = "false";
+                // playFunc();
+                // resetOpac();
+                // if(document.getElementById("opacBtn").style.backgroundImage == "none"){
+                // }else{
+                //     opacToggle();
+                // }
+                // var elements = document.getElementsByTagName("svg")[0].children;
+                //     for (var i = 0; i < elements.length; i++) {
+                //         elements[i].style.transformOrigin = "center";
+                //         elements[i].style.transformBox = "fill-box";
+                //     }
+                window.saveMe = "HH";
+                //window.saveMe = document.getElementsByClassName("artboard")[0].getElementsByTagName("object")[0].contentWindow.document;
+                window.saveMe = document.getElementsByClassName("artboard")[0].getElementsByClassName("svgCode")[0].innerHTML;
+                var text = window.saveMe,
+                blob = new Blob([text], { type: 'text/plain' }),
+                anchor = document.createElement('a');
+
+                anchor.download = "image.svg";
+                anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+                anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+                anchor.click();
+                setTimeout(function(){
+                    var elements = document.getElementsByTagName("svg")[0].children;
+                        for (var i = 0; i < elements.length; i++) {
+                            //elements[i].style.transformOrigin = "";
+                        }
+                    if(window.remOpac == 1){
+                        window.remOpac = 0;
+                        opacToggle();
+                    }
+                }, 100);
+            }
+            function showBGName() {
+               var fil = document.getElementById("myBG");
+               window.imgBGFil = fil.value;
+               window.bgExt = fil.value.slice(-4);
+               replaceSlash = fil.value.replace(/\\/g, "/");
+               //document.getElementsByClassName("artboard")[0].style.backgroundImage = "url('"+replaceSlash+"')";
+                document.getElementsByClassName("artboard")[0].innerHTML = "<div class='svgCode'>"+replaceSlash+"</div>";
+            }
+            function opacToggle(){
+                if(document.getElementById("opacBtn").style.backgroundImage == "none"){
+                    document.getElementById("opacBtn").style.backgroundImage = "url(squares.svg)";
+                    document.getElementsByTagName("svg")[0].style.backgroundImage = "url(squares.svg)";
+                }else{
+                    document.getElementById("opacBtn").style.backgroundImage = "none";
+                    document.getElementsByTagName("svg")[0].style.backgroundImage = "none";
+                }
+            }
+            function zoomFunc(){
+                testZoom = document.getElementById("zoomLevel").value/100;
+                document.getElementsByClassName("svgCode")[0].style.transform = "scale("+testZoom+")";
+            }
+
+
+            function pushCode(){
+                document.getElementsByClassName("svgCode")[0].innerHTML = document.getElementById("realCode").innerText;
+                zoomFunc();
+            }
+            function makeGroup(){
+              if(window.getSelection().isCollapsed == false){
+                stringToCut = window.getSelection().anchorNode.nodeValue;
+                stringToStop = window.getSelection().focusNode.nodeValue;
+                stringWhole = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(stringToCut), document.getElementById("realCode").innerText.indexOf(stringToStop)+stringToStop.length)
+
+                beforeCode = document.getElementById("realCode").innerText.slice(0,document.getElementById("realCode").innerText.indexOf(stringToCut));
+                afterCode = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(stringToStop)+stringToStop.length,document.getElementById("realCode").innerText.length);
+
+                document.getElementById("realCode").innerText = beforeCode+"<g>"+stringWhole+"</g>"+afterCode;
+              }
+              // console.log("beforeCode:  "+beforeCode);
+              // console.log("stringWhole:  "+stringWhole);
+              // console.log("afterCode:  "+afterCode);
+            }
+            function toggleCode(){
+              if(document.getElementById("viewCode").style.right !== "0px"){
+                document.getElementById("viewCode").style.right = "0";
+              }else{
+                document.getElementById("viewCode").style.right = "-40vw";
+              }
+            }
+    </script>
+</head>
+<body>
+    <div id="viewCode">
+        <!-- <div id="viewCodeHeader">Edit Code</div> -->
+        <!-- <input type="text" /> -->
+        <div id="realCode" contenteditable="true" spellcheck="false" oninput="pushCode();">Once you open a valid SVG file, the code will be shown here</div>
+        <div id="codeCollapse" onclick="toggleCode();"></div>
+    </div>
+    <div class="header">
+        <form id="frmMain" name="frmMain" class="btnDiv" title="Open SVG file">
+            <input type="file" id="myBG" name="myBG" accept=".svg" />
+        </form>
+        <div class="btnDiv" onclick="saveFunc();" title="Save as SVG"></div>
+
+        <div id="zoomDiv">
+            <select id="zoomLevel" onchange="zoomFunc();">
+                <option value="25">25%</option>
+                <option value="50">50%</option>
+                <option value="100" selected>100%</option>
+                <option value="125">125%</option>
+                <option value="150">150%</option>
+                <option value="200">200%</option>
+                <option value="300">300%</option>
+                <option value="400">400%</option>
+            </select>
+            <div id="opacBtn" onclick="opacToggle();"></div>
+            <div id="groupBtn" class="btnDiv" onclick="makeGroup();">G</div>
+        </div>
+    </div>
+    <div class="artboard"></div>
+    <script>
+        function handleFileSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('image.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+      reader.onload = (function(theFile) {
+        return function(e) {
+          var span = document.createElement('span');
+            document.getElementsByClassName("artboard")[0].innerHTML = "<div class='svgCode'>"+e.target.result+"</div>";
+            document.getElementById("realCode").innerText = e.target.result;
+            if(document.getElementById("viewCode").style.right !== "0px"){
+              toggleCode();
+            }
+        };
+      })(f);
+
+        reader.readAsText(f);
+
+        setTimeout(function(){
+        if(document.getElementById("opacBtn").style.backgroundImage == "none"){
+            // opacToggle();   
+            document.getElementsByTagName("svg")[0].style.backgroundImage = "none";
+        }
+        zoomFunc();
+        checkChildren();
+        }, 100);
+
+        // setTimeout(function(){
+        //     document.getElementsByClassName("timeline")[0].innerHTML = "";
+        //     layerVar = "";
+        //     window.layers = document.getElementsByTagName("svg")[0].children;
+        //     checkLayers();
+        //     resizeView();
+        // }, 100);
+        
+    }
+  }
+
+  document.getElementById('myBG').addEventListener('change', handleFileSelect, false);
+        
+        function handleVideoSelect(evt) {
+    var files = evt.target.files; // FileList object
+
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+
+      // Only process image files.
+      if (!f.type.match('video.*')) {
+        continue;
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+          // Render thumbnail.
+          var span = document.createElement('span');
+          //span.innerHTML = ['<img class="thumb" src="', e.target.result,
+                            //'" title="', escape(theFile.name), '"/>'].join('');
+          //document.getElementById("myVid").src = e.target.result;
+            showFileName();
+        };
+      })(f);
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+  function checkChildren(){
+    document.getElementsByClassName("svgCode")[0].addEventListener('click', function(e){
+      if(e.target.tagName !== "svg"){
+        document.getElementById("realCode").focus();
+        // document.getElementById("realCode").setSelectionRange(0,1);
+
+        document.createRange().setStart(document.getElementById("realCode").childNodes[2], 5);
+        document.createRange().collapse(true);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(document.createRange());
+
+        window.find(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">")));
+        // console.log(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">")));
+        // startCode = document.getElementById("realCode").innerText.slice(0,document.getElementById("realCode").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))));
+        // middleCode = e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"));
+        // endCode = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))), document.getElementById("realCode").innerText.length);
+        // document.getElementById("realCode").innerHTML = "<xmp>"+startCode+"</xmp><a id='select'>DDDDDDDDD</a><xmp>"+endCode+"</xmp>";
+        // document.getElementById("select").innerText = middleCode;
+      }
+    })
+  }
+    </script>
+    <script src="ace/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("realCode");
+    </script>
+</body>
+</html>
