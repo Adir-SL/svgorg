@@ -147,7 +147,7 @@
             for (i = 0; i < x.length; i++) {
               console.log(x[i]);
               if(x[i].children > 0){
-                document.getElementById("realCode").innerHTML += x[i].tagName + "<br>";
+                document.getElementById("realCode").innerHTML += "<details><summary>" + x[i].tagName + "</summary</details><br>";
               }else{
                 document.getElementById("realCode").innerHTML += x[i].tagName + "<br>";
               }
