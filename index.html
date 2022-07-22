@@ -145,9 +145,11 @@
             var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children;
             var i;
             for (i = 0; i < x.length; i++) {
-              console.log(x[i]);
-              if(x[i].children > 0){
+              // console.log(x[i]);
+              console.log(x[i].children)
+              if(x[i].childElementCount > 0){
                 document.getElementById("realCode").innerHTML += "<details><summary>" + x[i].tagName + "</summary</details><br>";
+                  console.log("Y")
               }else{
                 document.getElementById("realCode").innerHTML += x[i].tagName + "<br>";
               }
