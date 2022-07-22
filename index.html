@@ -139,7 +139,14 @@
           var span = document.createElement('span');
             document.getElementsByClassName("artboard")[0].innerHTML = "<div class='svgCode'>"+e.target.result+"</div>";
             document.getElementById("realCode").innerText = e.target.result;
-            console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0])
+            // console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[i]);
+
+            var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children;
+            var i;
+            for (i = 0; i < x.length; i++) {
+              console.log(x[i]);
+            }
+
             if(document.getElementById("viewCode").style.right !== "0px"){
               toggleCode();
             }
