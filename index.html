@@ -146,7 +146,7 @@
             var i;
             for (i = 0; i < x.length; i++) {
               console.log(x[i]);
-              document.getElementById("realCode").innerHTML += "<code>" + x[i] + "</code><br>";
+              document.getElementById("realCode").innerHTML += x[i].toString() + "<br>";
             }
 
             if(document.getElementById("viewCode").style.right !== "0px"){
