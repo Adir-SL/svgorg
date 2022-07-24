@@ -148,7 +148,7 @@
               // console.log(x[i]);
               console.log(x[i].children)
               if(x[i].childElementCount > 0){
-                document.getElementById("realCode").innerHTML += "<details><summary>" + x[i].tagName + "</summary</details><br>";
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(e);'>" + x[i].tagName + "</summary</details><br>";
                   console.log("Y")
               }else{
                 document.getElementById("realCode").innerHTML += x[i].tagName + "<br>";
