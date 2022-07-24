@@ -155,7 +155,7 @@
                 tempCode = x[i].outerHTML;
                 tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
-                console.log(tempCode);
+                // console.log(tempCode);
                 document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"'>" + x[i].tagName + "</summary</details>";
               }else{
                 document.getElementById("realCode").innerHTML += "<div>" + x[i].tagName + "</div>";
