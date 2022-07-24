@@ -152,7 +152,7 @@
               // console.log(x[i]);
               console.log(x[i].children)
               if(x[i].childElementCount > 0){
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);'>" + x[i].tagName + "</summary</details>";
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin="+x[i]+">" + x[i].tagName + "</summary</details>";
                   console.log("Y")
               }else{
                 document.getElementById("realCode").innerHTML += "<div>" + x[i].tagName + "</div>";
