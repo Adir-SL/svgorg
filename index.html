@@ -153,10 +153,10 @@
               // console.log(x[i].children)
               if(x[i].childElementCount > 0){
                 tempCode = x[i].outerHTML;
-                tempCode = tempCode.replace(/"/g, "'");
+                tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
                 console.log(tempCode);
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin="+tempCode+">" + x[i].tagName + "</summary</details>";
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin='"+tempCode+"'>" + x[i].tagName + "</summary</details>";
               }else{
                 document.getElementById("realCode").innerHTML += "<div>" + x[i].tagName + "</div>";
               }
