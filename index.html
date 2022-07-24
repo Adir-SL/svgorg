@@ -153,6 +153,7 @@
               // console.log(x[i].children)
               if(x[i].childElementCount > 0){
                 tempCode = x[i].outerHTML;
+                tempCode = tempCode.replace(/"/g, "'");
                 console.log(tempCode);
                 document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin="+tempCode+">" + x[i].tagName + "</summary</details>";
               }else{
