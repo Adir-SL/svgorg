@@ -152,8 +152,9 @@
               // console.log(x[i]);
               // console.log(x[i].children)
               if(x[i].childElementCount > 0){
-                console.log(x[i]);
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin="+x[i]+">" + x[i].tagName + "</summary</details>";
+                tempCode = x[i].toString();
+                console.log(tempCode);
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' condeWithin="+tempCode+">" + x[i].tagName + "</summary</details>";
               }else{
                 document.getElementById("realCode").innerHTML += "<div>" + x[i].tagName + "</div>";
               }
