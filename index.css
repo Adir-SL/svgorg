@@ -438,6 +438,11 @@ svg g:hover{
     padding: 12px;
     z-index: 1;
     pointer-events: none;
+    opacity: 0;
+    animation: fadeMe 300ms linear 500ms;
+}
+@keyframes fadeMe{
+    100%{opacity: 1;}
 }
 /* #viewCodeHeader:hover{
     background-color: pink;
