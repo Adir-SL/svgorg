@@ -151,10 +151,11 @@
             for (i = 0; i < x.length; i++) {
               // console.log(x[i]);
               // console.log(x[i].children)
-              if(x[i].childElementCount > 0){
-                tempCode = x[i].outerHTML;
+              tempCode = x[i].outerHTML;
                 tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
+              if(x[i].childElementCount > 0){
+                
                 // console.log(tempCode);
                 document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"'>" + x[i].tagName + "</summary</details>";
               }else{
