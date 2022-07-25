@@ -439,7 +439,7 @@ svg g:hover{
     z-index: 1;
     pointer-events: none;
     opacity: 0;
-    animation: fadeMe 300ms linear 500ms;
+    animation: fadeMe 300ms linear 500ms forwards;
 }
 @keyframes fadeMe{
     100%{opacity: 1;}
