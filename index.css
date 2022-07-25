@@ -434,7 +434,10 @@ svg g:hover{
     position: absolute;
     left: 0;
     top: 1em;
+    border-radius: 4px;
+    padding: 12px;
     z-index: 1;
+    pointer-events: none;
 }
 /* #viewCodeHeader:hover{
     background-color: pink;
