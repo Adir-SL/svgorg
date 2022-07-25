@@ -424,6 +424,18 @@ svg g:hover{
     background-color: hotpink;
     color: #ffffff;
 }
+#realCode div, #realCode summary{
+    position: relative;
+}
+#realCode div:hover::after, #realCode summary:hover::after{
+    content: attr(codewithin);
+    background-color: #000000;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 1em;
+    z-index: 1;
+}
 /* #viewCodeHeader:hover{
     background-color: pink;
 } */
