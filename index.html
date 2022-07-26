@@ -135,9 +135,9 @@
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
               if(x[i].childElementCount > 0){
                 
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</summary</details>";
+                e.target.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</summary</details>";
               }else{
-                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
+                e.target.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
               }
             }
       }
