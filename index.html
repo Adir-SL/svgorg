@@ -123,11 +123,12 @@
     <div class="artboard"></div>
     <script>
       function revealDetails(e){
-        
         console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
         window.tempDetails = e.target.parentElement;
-        
-            var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
+        if(window.tempDetails.classList.contains("hasDetails")){
+            
+        }else{
+          var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
             var i;
             for (i = 0; i < x.length; i++) {
               tempCode = x[i].outerHTML;
@@ -140,6 +141,7 @@
               }
               window.tempDetails.classList.add("hasDetails");
             }
+        }
             if(window.tempDetails.open == true){
               window.tempDetails.open = false;
             }else{
