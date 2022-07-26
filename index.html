@@ -124,8 +124,8 @@
     <script>
       function revealDetails(e){
         // alert(e.target.innerText);
-        console.log(e.target.getAttribute("codewithin"));
-        console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex").children])
+        // console.log(e.target.getAttribute("codewithin"));
+        console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
       }
         function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
