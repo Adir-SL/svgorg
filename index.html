@@ -127,6 +127,7 @@
         // console.log(e.target.getAttribute("codewithin"));
         console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
         window.tempDetails = e.target.parentElement;
+        window.tempDetails.innerHTML = "";
             var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
             var i;
             for (i = 0; i < x.length; i++) {
@@ -139,6 +140,7 @@
                 window.tempDetails.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
               }
             }
+            window.tempDetails.open = true;
       }
         function handleFileSelect(evt) {
     var files = evt.target.files; // FileList object
