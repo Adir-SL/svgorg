@@ -426,6 +426,12 @@ svg g:hover{
 }
 #realCode div, #realCode summary{
     position: relative;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#realCode details div, #realCode details summary{
+    border-top: none;
+    border-bottom: none;
 }
 #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
