@@ -124,7 +124,7 @@
     <script>
       function revealDetails(e){
         // alert(e.target.innerText);
-        console.log(e.target)
+        console.log(e.target.parentElement)
         // console.log(e.target.getAttribute("codewithin"));
         console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
 
@@ -135,10 +135,9 @@
                 tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
               if(x[i].childElementCount > 0){
-                
-                e.target.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</summary</details>";
+                e.target.parentElement.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</summary</details>";
               }else{
-                e.target.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
+                e.target.parentElement.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
               }
             }
       }
