@@ -157,9 +157,9 @@
               if(x[i].childElementCount > 0){
                 
                 // console.log(tempCode);
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"'>" + x[i].tagName + "</summary</details>";
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</summary</details>";
               }else{
-                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"'>" + x[i].tagName + "</div>";
+                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + x[i].tagName + "</div>";
               }
             }
 
