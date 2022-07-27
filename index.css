@@ -427,11 +427,14 @@ svg g:hover{
 #realCode div, #realCode summary{
     position: relative;
     border-top: 1px solid #EBEEFE;
-    border-bottom: 1px solid #EBEEFE;
+    /* border-bottom: 1px solid #EBEEFE; */
+}
+#realCode div:first-of-type, #realCode summary:first-of-type{
+    border-top: none;
 }
 #realCode details div, #realCode details details{
     border-top: none;
-    border-bottom: none;
+    /* border-bottom: none; */
     margin-left: 14px;
 }
 #realCode div:hover::after, #realCode summary:hover::after{
