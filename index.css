@@ -424,6 +424,9 @@ svg g:hover{
     background-color: hotpink;
     color: #ffffff;
 }
+#realCode{
+    line-height: 1.5em;
+}
 #realCode div, #realCode summary{
     position: relative;
     border-top: 1px solid #EBEEFE;
