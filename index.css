@@ -440,6 +440,10 @@ svg g:hover{
     /* border-bottom: none; */
     margin-left: 14px;
 }
+#realCode div:focus, #realCode summary:focus{
+    outline: none;
+    border: none;
+}
 #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
     background-color: #000000;
@@ -447,7 +451,7 @@ svg g:hover{
     position: absolute;
     left: 0;
     top: 1em;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 12px;
     z-index: 1;
     pointer-events: none;
