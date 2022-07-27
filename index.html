@@ -133,7 +133,7 @@
             for (i = 0; i < x.length; i++) {
 
               printChild = x[i].tagName;
-                if(x[i].id !== undefined){
+                if(x[i].id !== ''){
                   printChild += " #"+x[i].id;
                 }
                 if(x[i].classList.length > 0){
@@ -190,7 +190,7 @@
 
               if(x[i].childElementCount > 0){
                 printChild = x[i].tagName;
-                if(x[i].id !== undefined){
+                if(x[i].id !== ''){
                   printChild += " #"+x[i].id;
                 }
                 if(x[i].classList.length > 0){
