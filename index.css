@@ -469,10 +469,15 @@ svg g:hover{
 summary{
     list-style-type: none;
 }
-summary::marker{
-    content: 'D';
-    width: 200px;
-    background-image: url('chev.svg');
+details summary::before{
+    content: '';
+    padding: 4px 10px;
+    background-image: url(chev.svg);
+    background-position: center;
+    background-size: contain;
+}
+details[open] summary::before{
+    transform: rotate(90deg);
 }
 /* #viewCodeHeader:hover{
     background-color: pink;
