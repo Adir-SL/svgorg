@@ -470,14 +470,16 @@ summary{
     list-style-type: none;
 }
 details summary::before{
-    content: '';
+    content: 'D';
+    position: relative;
     padding: 4px 10px;
     background-image: url(chev.svg);
     background-position: center;
     background-size: contain;
+    transition: all 300ms linear 0s;
 }
 details[open] summary::before{
-    transform: rotate(90deg);
+    background-image: url(chevDown.svg);
 }
 /* #viewCodeHeader:hover{
     background-color: pink;
