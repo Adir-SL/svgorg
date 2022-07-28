@@ -136,7 +136,7 @@
               window.tempX = ".children[" + e.target.getAttribute("svgIndex") + "]";
             }
           // var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
-          var x = eval('document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0]'+window.tempX);
+          var x = eval('document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0]'+window.tempX+".children");
             var i;
             for (i = 0; i < x.length; i++) {
 
