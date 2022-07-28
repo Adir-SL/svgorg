@@ -129,9 +129,14 @@
             
         }else{
           // 1_0 1].children[
-          window.tempX = e.target.getAttribute("svgIndex").replace(/_/g, '].children[');
-          window.tempX = ".children[" + window.tempX + "]";
-          var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
+            if(e.target.getAttribute("svgIndex").includes("_") == true){
+              window.tempX = e.target.getAttribute("svgIndex").replace(/_/g, '].children[');
+              window.tempX = ".children[" + window.tempX + "]";
+            }else{
+              window.tempX = ".children[" + e.target.getAttribute("svgIndex") + "]";
+            }
+          // var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children;
+          var x = eval('document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0]'+window.tempX);
             var i;
             for (i = 0; i < x.length; i++) {
 
