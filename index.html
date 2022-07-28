@@ -196,8 +196,8 @@
                 tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
 
-              if(x[i].childElementCount > 0){
                 printChild = x[i].tagName;
+              if(x[i].childElementCount > 0){
                 if(x[i].id !== ''){
                   printChild += " #<b>"+x[i].id+"</b>";
                 }
