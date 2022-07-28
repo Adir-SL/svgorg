@@ -443,7 +443,7 @@ svg g:hover{
 #realCode details div, #realCode details details{
     border-top: none;
     /* border-bottom: none; */
-    margin-left: 14px;
+    margin-left: 22px;
 }
 #realCode div:focus, #realCode summary:focus{
     outline: none;
