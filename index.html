@@ -155,9 +155,9 @@
                 tempCode = tempCode.replace(/'/g, '"');
                 tempCode = tempCode.replace(/(\r\n|\n|\r)/gm, "");
               if(x[i].childElementCount > 0){
-                window.tempDetails.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+e.target.getAttribute("svgIndex")+"_"+i+"'>" + printChild + "</summary></details>";
+                window.tempDetails.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+e.target.getAttribute("svgIndex")+"_"+i+"'>" + printChild + "</summary><pre><code>"+tempCode+"</code></pre></details>";
               }else{
-                window.tempDetails.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "</div>";
+                window.tempDetails.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCode+"</code></pre></div>";
               }
               window.tempDetails.classList.add("hasDetails");
             }
