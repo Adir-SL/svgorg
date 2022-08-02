@@ -455,6 +455,7 @@ svg g:hover{
     top: 14px;
     z-index: 1;
     opacity: 0;
+    height: 0;
     pointer-events: none;
     white-space: normal;
 }
@@ -468,6 +469,7 @@ code {
     font-weight: normal !important;
   }
 #realCode div:hover pre, #realCode summary:hover pre{
+    height: fit-content;
     animation: fadeMe 300ms linear 500ms forwards;
 }
 /* #realCode div:hover::after, #realCode summary:hover::after{
