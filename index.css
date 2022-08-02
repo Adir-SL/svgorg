@@ -449,7 +449,7 @@ svg g:hover{
     outline: none;
     border: none;
 }
-#realCode div:hover::after, #realCode summary:hover::after{
+/* #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
     background-color: #000000;
     color: #ffffff;
@@ -462,7 +462,7 @@ svg g:hover{
     pointer-events: none;
     opacity: 0;
     animation: fadeMe 300ms linear 1500ms forwards;
-}
+} */
 @keyframes fadeMe{
     100%{opacity: 1;}
 }
