@@ -459,6 +459,7 @@ svg g:hover{
     white-space: normal;
 }
 code {
+    border-radius: 8px;
     filter: brightness(150%);
     background: #9f9f9f !important;
   }
