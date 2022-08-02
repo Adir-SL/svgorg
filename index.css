@@ -428,7 +428,7 @@ svg g:hover{
     line-height: 1.5em;
     font-size: 14px;
 }
-#realCode div, #realCode summary{
+#realCode div, #realCode details, #realCode summary{
     position: relative;
     border-top: 1px solid #EBEEFE;
     color: #9fa1ac;
@@ -448,6 +448,11 @@ svg g:hover{
 #realCode div:focus, #realCode summary:focus{
     outline: none;
     border: none;
+}
+#realCode pre{
+    position: absolute;
+    left: 0;
+    top: 24px;
 }
 /* #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
