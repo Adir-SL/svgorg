@@ -453,6 +453,7 @@ svg g:hover{
     position: absolute;
     left: 0;
     top: 24px;
+    visibility: hidden;
 }
 /* #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
