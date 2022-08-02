@@ -458,6 +458,14 @@ svg g:hover{
     pointer-events: none;
     white-space: normal;
 }
+code {
+    filter: brightness(150%);
+    background: #9f9f9f !important;
+  }
+  code .hljs-name {
+    color: #0000aa !important;
+    font-weight: normal !important;
+  }
 #realCode div:hover pre, #realCode summary:hover pre{
     animation: fadeMe 300ms linear 500ms forwards;
 }
