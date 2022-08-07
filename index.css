@@ -76,7 +76,7 @@ svg g:hover{
     max-width: 99%;
     max-height: 99%;
     text-align: center;
-    transform-origin: 0 0;
+    transform-origin: 50% 0;
     
 }
 .artboard div svg{
