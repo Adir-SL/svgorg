@@ -54,6 +54,7 @@ body{
     left: 0;
     white-space: nowrap;
     overflow: auto;
+    direction: rtl;
 }
 svg path, svg rect, svg line, svg g{
     /*transform-origin: center;*/
