@@ -16,7 +16,7 @@ select{
     background-image: url(img/chevDownWhite.svg);
     background-size: 16px;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: calc(100% - 6px) center;
 }
 .header{
     background-color: #434144;
