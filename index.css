@@ -13,7 +13,7 @@ select{
     padding: 4px 24px 4px 8px;
     font-family: sans-serif;
     appearance:none;
-    background-image: url(img/chevDown.svg);
+    background-image: url(img/chevDownWhite.svg);
     background-repeat: no-repeat;
     background-position: right center;
 }
