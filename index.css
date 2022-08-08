@@ -498,12 +498,12 @@ details > summary::before{
     content: '';
     position: relative;
     padding: 4px 10px;
-    background-image: url(chev.svg);
+    background-image: url(img/chev.svg);
     background-position: center;
     background-size: contain;
 }
 details[open] > summary::before{
-    background-image: url(chevDown.svg);
+    background-image: url(img/chevDown.svg);
 }
 /* #viewCodeHeader:hover{
     background-color: pink;
