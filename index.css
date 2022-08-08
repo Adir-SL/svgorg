@@ -48,7 +48,7 @@ body{
 }
 .artboard{
     position: absolute;
-    width: 60%;
+    width: 100%;
     height: calc(100vh - 80px);
     top: 80px;
     left: 0;
