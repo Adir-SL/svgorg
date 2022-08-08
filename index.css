@@ -4,6 +4,12 @@ body{
     color: #333333;
     user-select: none;
 }
+select{
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 8px;
+}
 .header{
     background-color: #434144;
     position: absolute;
