@@ -518,6 +518,13 @@ details[open] > summary::before{
     border-radius: 50% 0 0 50%;
     cursor: pointer;
 }
+#codeCollapse::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/code.svg);
+}
 #showAlert{
     position: fixed;
     width: 100%;
