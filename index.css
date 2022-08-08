@@ -5,12 +5,14 @@ body{
     user-select: none;
 }
 select{
+    position: relative;
     border: 1px solid white;
     color: white;
     background-color: transparent;
     border-radius: 999px;
-    padding: 4px 8px;
+    padding: 4px 24px 4px 8px;
     font-family: sans-serif;
+    appearance:none;
 }
 .header{
     background-color: #434144;
