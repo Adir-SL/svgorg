@@ -9,6 +9,7 @@ select{
     color: white;
     background-color: transparent;
     border-radius: 8px;
+    padding: 4px;
 }
 .header{
     background-color: #434144;
