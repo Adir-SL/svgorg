@@ -8,8 +8,8 @@ select{
     border: 1px solid white;
     color: white;
     background-color: transparent;
-    border-radius: 8px;
-    padding: 4px;
+    border-radius: 999px;
+    padding: 4px 8px;
 }
 .header{
     background-color: #434144;
