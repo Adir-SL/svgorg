@@ -525,6 +525,7 @@ details[open] > summary::before{
     height: 100%;
     background-image: url(img/code.svg);
     background-size: 24px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 #showAlert{
