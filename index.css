@@ -125,10 +125,10 @@ svg g:hover{
     animation: blinkMe 500ms ease-in-out infinite alternate;
 }
 .header .btnDiv:nth-of-type(1){
-    background-image: url(img/icon_save.png);
+    background-image: url(img/download.svg);
 }
 .header .btnDiv:nth-of-type(2){
-    background-image: url(img/icon_save.png);
+    background-image: url(img/download.svg);
 }
 .header .btnDiv:hover{
     background-color: #6b6a68;
@@ -137,7 +137,7 @@ svg g:hover{
     pointer-events: none;
 }
 .header form{
-    background-image: url(img/icon_open.png) !important;
+    background-image: url(img/load.svg) !important;
     overflow: hidden;
 }
 .header form input{
