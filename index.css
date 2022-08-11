@@ -109,7 +109,7 @@ svg g:hover{
     position: relative;
     float: left;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 4px;
     padding: 4px;
     height: 36px;
     width: 36px;
@@ -138,6 +138,7 @@ svg g:hover{
     pointer-events: none;
 }
 .header form{
+    margin-left: 20px !important;
     background-image: url(img/load.svg) !important;
     overflow: hidden;
 }
