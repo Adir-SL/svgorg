@@ -42,8 +42,6 @@ select{
     float: right;
     margin: 28px 10px;
     margin-right: 20px;
-    /* margin-right: 10px;
-    margin-left: 10px; */
 }
 #zoomDiv #opacBtn{
     background-image: url(img/squares.svg);
