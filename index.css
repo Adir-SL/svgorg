@@ -36,8 +36,7 @@ select{
     position: relative;
     float: right;
     color: white;
-    /* height: 100%;
-    z-index: 9; */
+    /* z-index: 9; */
 }
 #zoomLevel{
     float: right;
