@@ -121,6 +121,15 @@ svg g:hover{
     background-size: 36px;
     border-radius: .8vh;
 }
+.header .btnDiv:hover::after{
+    content: attr(tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: black;
+}
 .header .blinky{
     animation: blinkMe 500ms ease-in-out infinite alternate;
 }
