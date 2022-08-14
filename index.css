@@ -124,12 +124,17 @@ svg g:hover{
 .header .btnDiv:hover::after{
     content: attr(tooltip);
     position: absolute;
-    top: 100%;
+    top: 110%;
     left: 50%;
     padding: 12px;
+    line-height: 1em;
+    font-size: 14px;
     transform: translateX(-50%);
     white-space: nowrap;
     background: black;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.4) inset;
+
 }
 .header .blinky{
     animation: blinkMe 500ms ease-in-out infinite alternate;
