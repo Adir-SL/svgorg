@@ -105,10 +105,10 @@
         <div id="codeCollapse" onclick="toggleCode();"></div>
     </div>
     <div class="header">
-        <form id="frmMain" name="frmMain" class="btnDiv" title="Open SVG file">
+        <form id="frmMain" name="frmMain" class="btnDiv" tooltip="Open SVG file">
             <input type="file" id="myBG" name="myBG" accept=".svg" />
         </form>
-        <div class="btnDiv" onclick="saveFunc();" title="Save as SVG"></div>
+        <div class="btnDiv" onclick="saveFunc();" tooltip="Save as SVG"></div>
 
         <div id="zoomDiv">
             <select id="zoomLevel" onchange="zoomFunc();">
@@ -272,7 +272,7 @@
           // Render thumbnail.
           var span = document.createElement('span');
           //span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                            //'" title="', escape(theFile.name), '"/>'].join('');
+                            //'" tooltip="', escape(theFile.name), '"/>'].join('');
           //document.getElementById("myVid").src = e.target.result;
             showFileName();
         };
