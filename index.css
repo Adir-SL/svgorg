@@ -470,7 +470,7 @@ svg g:hover{
     color: #000000;
 }
 #realCode div:first-of-type, #realCode summary:first-of-type{
-    border-top: none;
+    /* border-top: none; */
 }
 #realCode details div, #realCode details details{
     border-top: none;
