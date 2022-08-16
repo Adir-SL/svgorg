@@ -68,19 +68,19 @@
 
 
             function pushCode(){
-                document.getElementsByClassName("svgCode")[0].innerHTML = document.getElementById("sortlist").innerText;
+                document.getElementsByClassName("svgCode")[0].innerHTML = document.getElementById("realCode").innerText;
                 zoomFunc();
             }
             function makeGroup(){
               if(window.getSelection().isCollapsed == false){
                 stringToCut = window.getSelection().anchorNode.nodeValue;
                 stringToStop = window.getSelection().focusNode.nodeValue;
-                stringWhole = document.getElementById("sortlist").innerText.slice(document.getElementById("sortlist").innerText.indexOf(stringToCut), document.getElementById("sortlist").innerText.indexOf(stringToStop)+stringToStop.length)
+                stringWhole = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(stringToCut), document.getElementById("realCode").innerText.indexOf(stringToStop)+stringToStop.length)
 
-                beforeCode = document.getElementById("sortlist").innerText.slice(0,document.getElementById("sortlist").innerText.indexOf(stringToCut));
-                afterCode = document.getElementById("sortlist").innerText.slice(document.getElementById("sortlist").innerText.indexOf(stringToStop)+stringToStop.length,document.getElementById("sortlist").innerText.length);
+                beforeCode = document.getElementById("realCode").innerText.slice(0,document.getElementById("realCode").innerText.indexOf(stringToCut));
+                afterCode = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(stringToStop)+stringToStop.length,document.getElementById("realCode").innerText.length);
 
-                document.getElementById("sortlist").innerText = beforeCode+"<g>"+stringWhole+"</g>"+afterCode;
+                document.getElementById("realCode").innerText = beforeCode+"<g>"+stringWhole+"</g>"+afterCode;
               }
               // console.log("beforeCode:  "+beforeCode);
               // console.log("stringWhole:  "+stringWhole);
@@ -103,7 +103,7 @@
     <div id="viewCode">
         <!-- <div id="viewCodeHeader">Edit Code</div> -->
         <!-- <input type="text" /> -->
-        <ul id="sortlist" spellcheck="false" oninput="pushCode();">Once you open a valid SVG file, the code will be shown here</ul>
+        <div id="realCode" spellcheck="false" oninput="pushCode();">Once you open a valid SVG file, the code will be shown here</div>
         <div id="codeCollapse" onclick="toggleCode();"></div>
     </div>
     <div class="header">
@@ -168,7 +168,7 @@
               }
               window.tempDetails.classList.add("hasDetails");
             }
-            // document.getElementById("sortlist").highlightAll();
+            // document.getElementById("realCode").highlightAll();
             hljs.highlightAll();
 
             if(window.tempDetails.open == true){
@@ -195,10 +195,10 @@
         return function(e) {
           var span = document.createElement('span');
             document.getElementsByClassName("artboard")[0].innerHTML = "<div class='svgCode'>"+e.target.result+"</div>";
-            // document.getElementById("sortlist").innerText = e.target.result;
+            // document.getElementById("realCode").innerText = e.target.result;
             // console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[i]);
 
-            document.getElementById("sortlist").innerHTML = '';
+            document.getElementById("realCode").innerHTML = '';
             var x = document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children;
             var i;
             for (i = 0; i < x.length; i++) {
@@ -219,11 +219,9 @@
                   printChild += " ."+x[i].className;
                 }
                 // console.log(tempCode);
-                // document.getElementById("sortlist").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
-                document.getElementById("sortlist").innerHTML += "<li onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></li>";
+                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
               }else{
-                // document.getElementById("sortlist").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
-                document.getElementById("sortlist").innerHTML += "<li codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></li>";
+                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
               }
             }
 
@@ -288,20 +286,20 @@
   function checkChildren(){
     document.getElementsByClassName("svgCode")[0].addEventListener('click', function(e){
       if(e.target.tagName !== "svg"){
-        document.getElementById("sortlist").focus();
-        // document.getElementById("sortlist").setSelectionRange(0,1);
+        document.getElementById("realCode").focus();
+        // document.getElementById("realCode").setSelectionRange(0,1);
 
-        document.createRange().setStart(document.getElementById("sortlist").childNodes[2], 5);
+        document.createRange().setStart(document.getElementById("realCode").childNodes[2], 5);
         document.createRange().collapse(true);
         window.getSelection().removeAllRanges();
         window.getSelection().addRange(document.createRange());
 
         window.find(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">")));
         // console.log(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">")));
-        // startCode = document.getElementById("sortlist").innerText.slice(0,document.getElementById("sortlist").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))));
+        // startCode = document.getElementById("realCode").innerText.slice(0,document.getElementById("realCode").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))));
         // middleCode = e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"));
-        // endCode = document.getElementById("sortlist").innerText.slice(document.getElementById("sortlist").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))), document.getElementById("sortlist").innerText.length);
-        // document.getElementById("sortlist").innerHTML = "<xmp>"+startCode+"</xmp><a id='select'>DDDDDDDDD</a><xmp>"+endCode+"</xmp>";
+        // endCode = document.getElementById("realCode").innerText.slice(document.getElementById("realCode").innerText.indexOf(e.target.outerHTML.slice(0,e.target.outerHTML.indexOf(">"))), document.getElementById("realCode").innerText.length);
+        // document.getElementById("realCode").innerHTML = "<xmp>"+startCode+"</xmp><a id='select'>DDDDDDDDD</a><xmp>"+endCode+"</xmp>";
         // document.getElementById("select").innerText = middleCode;
       }
     })
@@ -309,7 +307,7 @@
     </script>
     <!-- <script src="ace/lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
-        var editor = ace.edit("sortlist");
+        var editor = ace.edit("realCode");
     </script> -->
 </body>
 </html>
