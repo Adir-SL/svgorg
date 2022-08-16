@@ -219,9 +219,11 @@
                   printChild += " ."+x[i].className;
                 }
                 // console.log(tempCode);
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
+                // document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
+                document.getElementById("realCode").innerHTML += "<ul onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></ul>";
               }else{
-                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
+                // document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
+                document.getElementById("realCode").innerHTML += "<ul codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></ul>";
               }
             }
 
