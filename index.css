@@ -462,7 +462,7 @@ svg g:hover{
 }
 #realCode div, #realCode details, #realCode summary{
     position: relative;
-    border-top: 1px solid #EBEEFE;
+    /* border-top: 1px solid #EBEEFE; */
     color: #9fa1ac;
     /* border-bottom: 1px solid #EBEEFE; */
 }
