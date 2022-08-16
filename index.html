@@ -90,9 +90,11 @@
               if(document.getElementById("viewCode").style.right !== "0px"){
                 document.getElementById("viewCode").style.right = "0";
                 document.getElementsByClassName("artboard")[0].style.width = "60%";
+                document.getElementById("codeCollapse").setAttribute("title", "Hide code");
               }else{
                 document.getElementById("viewCode").style.right = "-40vw";
                 document.getElementsByClassName("artboard")[0].style.width = "100%";
+                document.getElementById("codeCollapse").setAttribute("title", "Show code");
               }
             }
     </script>
