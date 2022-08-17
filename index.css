@@ -6,6 +6,7 @@ body{
 }
 select{
     position: relative;
+    height: 28px;
     border: 1px solid white;
     color: white;
     background-color: transparent;
@@ -51,6 +52,7 @@ select:hover{
     background-repeat: repeat;
     background-size: 100%;
     background-color: white;
+    border-radius: 50%;
     width: 28px;
     height: 28px;
     margin: 28px;
