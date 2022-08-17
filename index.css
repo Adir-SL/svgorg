@@ -56,7 +56,7 @@ select:hover{
     margin: 28px;
 }
 #zoomDiv #opacBtn:hover{
-    border: 1px solid white;
+    border: 2px solid white;
 }
 #zoomDiv div{
     float: right;
