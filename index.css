@@ -18,6 +18,9 @@ select{
     background-repeat: no-repeat;
     background-position: calc(100% - 6px) center;
 }
+select:hover{
+    background-color: #6b6a68;
+}
 .header{
     background-color: #434144;
     position: absolute;
