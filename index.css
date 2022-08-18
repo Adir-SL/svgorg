@@ -58,6 +58,7 @@ select:hover{
     margin: 28px;
 }
 #zoomDiv #opacBtn:hover{
+    outline-offset: 4px;
     outline: 2px solid #cdcac8;
 }
 #zoomDiv div{
