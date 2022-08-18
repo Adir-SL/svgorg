@@ -59,7 +59,7 @@ select:hover{
 }
 #zoomDiv #opacBtn:hover{
     outline-offset: 4px;
-    outline: 2px solid #cdcac8;
+    outline: 1px solid #cdcac8;
 }
 #zoomDiv div{
     float: right;
