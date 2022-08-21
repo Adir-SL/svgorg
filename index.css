@@ -96,7 +96,8 @@ svg g:hover{
     /*height: 50%;
     width: 50%;*/
     height: auto;
-    width: auto;
+    /* width: auto; */
+    width: fit-content;
     max-width: 99%;
     max-height: 99%;
     text-align: center;
