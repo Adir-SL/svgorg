@@ -76,7 +76,7 @@ select:hover{
     left: 0;
     white-space: nowrap;
     overflow: auto;
-    direction: rtl;
+    /* direction: rtl; */
     transition: width 200ms ease-in-out 0s;
 }
 svg path, svg rect, svg line, svg g{
