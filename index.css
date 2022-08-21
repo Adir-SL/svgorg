@@ -76,6 +76,9 @@ select:hover{
     left: 0;
     white-space: nowrap;
     overflow: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     /* direction: rtl; */
     transition: width 200ms ease-in-out 0s;
 }
@@ -95,8 +98,9 @@ svg g:hover{
     /*position: absolute;*/
     /*height: 50%;
     width: 50%;*/
-    height: auto;
+    /* height: auto; */
     /* width: auto; */
+    height: fit-content;
     width: fit-content;
     max-width: 99%;
     max-height: 99%;
