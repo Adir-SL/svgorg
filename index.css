@@ -61,6 +61,20 @@ select:hover{
     outline-offset: 2px;
     outline: 1px solid #cdcac8;
 }
+#zoomDiv #hoverBtn{
+    background-image: url(img/squares.svg);
+    background-repeat: repeat;
+    background-size: 100%;
+    background-color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    margin: 28px;
+}
+#zoomDiv #hoverBtn:hover{
+    outline-offset: 2px;
+    outline: 1px solid #cdcac8;
+}
 #zoomDiv div{
     float: right;
     text-align: center;
