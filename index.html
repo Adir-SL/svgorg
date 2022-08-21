@@ -105,7 +105,7 @@
     <div id="viewCode">
         <!-- <div id="viewCodeHeader">Edit Code</div> -->
         <!-- <input type="text" /> -->
-        <div id="realCode" spellcheck="false" oninput="pushCode();">Once you open a valid SVG file, the code will be shown here</div>
+        <ul id="realCode" class="slist" spellcheck="false" oninput="pushCode();">Once you open a valid SVG file, the code will be shown here</ul>
         <div id="codeCollapse" onclick="toggleCode();" title="Show code"></div>
     </div>
     <div class="header">
@@ -164,9 +164,9 @@
                 tempCodeReplaced = tempCode.replace(/</g, '&lt;');
                 tempCodeReplaced = tempCodeReplaced.replace(/>/g, '&gt;');
               if(x[i].childElementCount > 0){
-                window.tempDetails.innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+e.target.getAttribute("svgIndex")+"_"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
+                window.tempDetails.innerHTML += "<li onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+e.target.getAttribute("svgIndex")+"_"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></li>";
               }else{
-                window.tempDetails.innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
+                window.tempDetails.innerHTML += "<li codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></li>";
               }
               window.tempDetails.classList.add("hasDetails");
             }
@@ -221,9 +221,9 @@
                   printChild += " ."+x[i].className;
                 }
                 // console.log(tempCode);
-                document.getElementById("realCode").innerHTML += "<details><summary onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></summary></details>";
+                document.getElementById("realCode").innerHTML += "<li onclick='revealDetails(event);' codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></li>";
               }else{
-                document.getElementById("realCode").innerHTML += "<div codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></div>";
+                document.getElementById("realCode").innerHTML += "<li codewithin='"+tempCode+"' svgIndex='"+i+"'>" + printChild + "<pre><code>"+tempCodeReplaced+"</code></pre></li>";
               }
             }
 
@@ -242,6 +242,10 @@
         }
         zoomFunc();
         checkChildren();
+        window.addEventListener("DOMContentLoaded", () => {
+              slist(document.getElementById("realCode"));
+              alert("list")
+            });
         }, 100);
 
         // setTimeout(function(){
