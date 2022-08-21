@@ -543,6 +543,9 @@ code {
     height: fit-content;
     animation: fadeMe 300ms linear 500ms forwards;
 }
+.codeNoHover div:hover pre, .codeNoHover summary:hover pre{
+    animation: none;
+}
 /* #realCode div:hover::after, #realCode summary:hover::after{
     content: attr(codewithin);
     background-color: #000000;
