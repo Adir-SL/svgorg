@@ -82,6 +82,9 @@ select:hover{
     outline-offset: 2px;
     outline: 1px solid #cdcac8;
 }
+#zoomDiv .pressedHover{
+    opacity: .5 !important;
+}
 #zoomDiv div{
     float: right;
     text-align: center;
