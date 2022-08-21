@@ -83,7 +83,7 @@ select:hover{
     outline: 1px solid #cdcac8;
 }
 #zoomDiv .pressedHover{
-    opacity: .5 !important;
+    opacity: .3 !important;
 }
 #zoomDiv div{
     float: right;
