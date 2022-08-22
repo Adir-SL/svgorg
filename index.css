@@ -541,6 +541,9 @@ svg g:hover{
     outline: none;
     border: none;
 }
+.upBtn{
+    background-image: url(img/chevUp.svg);
+}
 .upBtn::after, .downBtn::after{
     content: 'Move Layer Down';
     position: absolute;
