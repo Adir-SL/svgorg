@@ -532,7 +532,7 @@ svg g:hover{
 .upBtn, .downBtn{
     position: relative;
     background-image: url(img/chevDown.svg);
-    background-size: 24px;
+    background-size: 18px;
     background-repeat: no-repeat;
     background-position: center;
     width: 24px;
