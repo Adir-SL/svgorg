@@ -549,6 +549,8 @@ svg g:hover{
     position: absolute;
     background-color: #333333;
     color: white;
+    padding: 4px;
+    border-radius: 4px;
     top: 24px;
     right: 0;
     white-space: nowrap;
