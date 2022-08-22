@@ -558,7 +558,9 @@ svg g:hover{
     opacity: 0;
     user-select: none;
     pointer-events: none;
-    /* animation: fadeMe 300ms linear 500ms forwards; */
+}
+.downBtn:hover::after{
+    animation: fadeMe 300ms linear 500ms forwards;
 }
 #realCode pre{
     position: absolute;
