@@ -564,6 +564,7 @@ svg g:hover{
     left: 0;
     top: auto;
     bottom: 24px;
+    z-index: 199;
     transform: rotate(180deg);
 }
 .upBtn:hover::after, .downBtn:hover::after{
