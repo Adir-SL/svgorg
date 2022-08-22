@@ -544,7 +544,7 @@ svg g:hover{
 .upBtn{
     transform: rotate(180deg);
 }
-.downBtn::after{
+.upBtn::after, .downBtn::after{
     content: 'Move Layer Down';
     position: absolute;
     background-color: #333333;
@@ -559,7 +559,14 @@ svg g:hover{
     user-select: none;
     pointer-events: none;
 }
-.downBtn:hover::after{
+.upBtn::after{
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: 24px;
+    transform: rotate(180deg);
+}
+.upBtn:hover::after, .downBtn:hover::after{
     animation: fadeMe 300ms linear 500ms forwards;
 }
 #realCode pre{
