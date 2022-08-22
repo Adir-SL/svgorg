@@ -549,12 +549,15 @@ svg g:hover{
     position: absolute;
     background-color: #333333;
     color: white;
-    padding: 4px;
+    padding: 4px 8px;
     border-radius: 4px;
     top: 24px;
     right: 0;
     white-space: nowrap;
     z-index: 99;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
     /* animation: fadeMe 300ms linear 500ms forwards; */
 }
 #realCode pre{
