@@ -541,9 +541,6 @@ svg g:hover{
     outline: none;
     border: none;
 }
-.upBtn{
-    transform: rotate(180deg);
-}
 .upBtn::after, .downBtn::after{
     content: 'Move Layer Down';
     position: absolute;
