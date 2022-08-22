@@ -501,6 +501,8 @@ svg g:hover{
 }
 #realCode div, #realCode details, #realCode summary{
     position: relative;
+    display: flex;
+    justify-content: space-between;
     /* border-top: 1px solid #EBEEFE; */
     color: #9fa1ac;
     /* border-bottom: 1px solid #EBEEFE; */
@@ -519,6 +521,9 @@ svg g:hover{
 #realCode div:focus, #realCode summary:focus{
     outline: none;
     border: none;
+}
+.flexDiv{
+    display: flex;
 }
 #realCode pre{
     position: absolute;
