@@ -561,12 +561,6 @@ svg g:hover{
 }
 .upBtn::after{
     content: 'Move Layer Up';
-    right: auto;
-    left: 0;
-    top: auto;
-    bottom: 24px;
-    z-index: 199;
-    transform: rotate(180deg);
 }
 .upBtn:hover::after, .downBtn:hover::after{
     animation: fadeMe 300ms linear 500ms forwards;
