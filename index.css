@@ -540,6 +540,9 @@ svg g:hover{
     outline: none;
     border: none;
 }
+.downBtn{
+    transform: rotate(180deg);
+}
 #realCode pre{
     position: absolute;
     left: 0;
