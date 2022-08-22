@@ -560,6 +560,7 @@ svg g:hover{
     pointer-events: none;
 }
 .upBtn::after{
+    content: 'Move Layer Up';
     right: auto;
     left: 0;
     top: auto;
