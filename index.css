@@ -530,6 +530,7 @@ svg g:hover{
     justify-content: flex-end;
 }
 .upBtn, .downBtn{
+    position: relative;
     background-image: url(img/chevDown.svg);
     background-size: 24px;
     background-repeat: no-repeat;
@@ -542,6 +543,17 @@ svg g:hover{
 }
 .upBtn{
     transform: rotate(180deg);
+}
+.downBtn::after{
+    content: 'Move Layer Down';
+    position: absolute;
+    background-color: #333333;
+    color: white;
+    top: 24px;
+    right: 0;
+    white-space: nowrap;
+    z-index: 99;
+    /* animation: fadeMe 300ms linear 500ms forwards; */
 }
 #realCode pre{
     position: absolute;
