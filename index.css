@@ -532,6 +532,9 @@ svg g:hover{
     background-position: center;
     width: 24px;
     aspect-ratio: 1 / 1;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 #realCode pre{
     position: absolute;
