@@ -525,6 +525,9 @@ svg g:hover{
 .flexDiv{
     display: flex;
 }
+#realCode .flexDiv{
+    flex-grow: 1;
+}
 .upBtn, .downBtn{
     background-image: url(img/chevDown.svg);
     background-size: 24px;
