@@ -568,7 +568,6 @@ svg g:hover{
 }
 .upBtn:hover, .downBtn:hover{
     outline: 1px solid #2c3e50;
-    opacity: .5;
 }
 #realCode pre{
     position: absolute;
