@@ -567,7 +567,7 @@ svg g:hover{
     animation: fadeMe 300ms linear 500ms forwards;
 }
 .upBtn:hover, .downBtn:hover{
-    outline: 1px solid gray;
+    outline: 1px solid #cdcac8;
 }
 #realCode pre{
     position: absolute;
