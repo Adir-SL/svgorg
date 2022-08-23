@@ -540,6 +540,7 @@ svg g:hover{
     background-color: transparent;
     outline: none;
     border: none;
+    border-radius: 50%;
 }
 .upBtn{
     background-image: url(img/chevUp.svg);
@@ -564,6 +565,9 @@ svg g:hover{
 }
 .upBtn:hover::after, .downBtn:hover::after{
     animation: fadeMe 300ms linear 500ms forwards;
+}
+.upBtn:hover, .downBtn:hover{
+    outline: 1px solid gray;
 }
 #realCode pre{
     position: absolute;
