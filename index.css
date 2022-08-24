@@ -195,6 +195,9 @@ svg g:hover{
     overflow: hidden;
 }
 .header form input{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 36px;
     width: 36px;
     opacity: 0;
