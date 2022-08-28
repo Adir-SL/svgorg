@@ -146,7 +146,8 @@
       }
 
       function revealDetails(e){
-        // console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
+        if(e.target.className !== "upBtn" && e.target.className !== "downBtn"){
+          // console.log(document.getElementsByClassName("svgCode")[0].querySelectorAll("svg")[0].children[e.target.getAttribute("svgIndex")].children)
         window.tempDetails = e.target.parentElement;
         if(window.tempDetails.classList.contains("hasDetails")){
             
@@ -192,6 +193,7 @@
               window.tempDetails.open = true;
             }
         } 
+        }
             
       }
         function handleFileSelect(evt) {
