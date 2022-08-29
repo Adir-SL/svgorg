@@ -141,11 +141,13 @@
       function upLayer(e){
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
+        console.log(window.testLayer.getAttribute("svgindex"));
         // console.log(e.target.parentElement.parentElement.parentElement.children[]);
       }
       function downLayer(e){
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
+        console.log(window.testLayer.getAttribute("svgindex"));
       }
 
       function revealDetails(e){
