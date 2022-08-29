@@ -151,8 +151,8 @@
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
         console.log(e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")]);
-        tempChild = e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")+2].outerHTML;
-        e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")+2].outerHTML = e.target.parentElement.parentElement.outerHTML;
+        tempChild = e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")+1].outerHTML;
+        e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")+1].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
       }
 
