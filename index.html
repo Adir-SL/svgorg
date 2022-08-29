@@ -150,9 +150,9 @@
       function downLayer(e){
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
-        console.log(e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+1]);
-        tempChild = e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+1].outerHTML;
-        e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+1].outerHTML = e.target.parentElement.parentElement.outerHTML;
+        console.log(e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2]);
+        tempChild = e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
+        e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
       }
 
