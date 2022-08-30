@@ -141,7 +141,7 @@
       function reorderFunc(z){
         // alert(z.getAttribute("svgindex"));
         window.newSvgIndex = 0;
-        var x = z.children;
+        var x = z.parentElement.children;
         var i;
         for (i = 0; i < x.length; i++) {
           x[i].setAttribute("svgindex", window.newSvgIndex);
