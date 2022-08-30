@@ -156,7 +156,10 @@
         tempChild = e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML;
         e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
-        reorderFunc(e.target.parentElement.parentElement);
+
+        setTimeout(() => {
+          reorderFunc(e.target.parentElement.parentElement);
+        }, "1000")
         // console.log(e.target.parentElement.parentElement.parentElement.children[]);
       }
       function downLayer(e){
@@ -166,7 +169,9 @@
         tempChild = e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
         e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
-        reorderFunc(e.target.parentElement.parentElement);
+        setTimeout(() => {
+          reorderFunc(e.target.parentElement.parentElement);
+        }, "1000")
       }
 
       function revealDetails(e){
