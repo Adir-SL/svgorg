@@ -140,12 +140,12 @@
     <script>
       function reorderFunc(z){
         // alert(z.getAttribute("svgindex"));
-        newSvgIndex = 0;
+        window.newSvgIndex = 0;
         var x = z.children;
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].setAttribute("svgindex") = newSvgIndex;
-          newSvgIndex += 1;
+          x[i].setAttribute("svgindex") = window.newSvgIndex;
+          window.newSvgIndex += 1;
         }
         
       }
