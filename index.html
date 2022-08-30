@@ -157,8 +157,6 @@
         tempChild = e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML;
         e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
-        testIndex = e.target.parentElement.parentElement.getAttribute("svgindex")-1;
-        e.target.parentElement.parentElement.setAttribute("svgindex", testIndex);
         // reorderFunc(e.target.parentElement.parentElement);
         // console.log(e.target.parentElement.parentElement.getAttribute("svgindex")-1);
       }
