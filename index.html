@@ -138,6 +138,11 @@
     </div>
     <div class="artboard"></div>
     <script>
+      function reorderFunc(x,y){
+        alert(x.getAttribute("svgIndex"));
+        alert(y.getAttribute("svgIndex"));
+      }
+      
       function upLayer(e){
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
@@ -156,11 +161,6 @@
         e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
         reorderFunc(e.target.parentElement.parentElement, e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")+2]);
-      }
-
-      function reorderFunc(x,y){
-        alert(x.getAttribute("svgIndex"));
-        alert(y.getAttribute("svgIndex"));
       }
 
       function revealDetails(e){
