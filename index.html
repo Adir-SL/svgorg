@@ -144,7 +144,7 @@
         var x = z.children;
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].setAttribute("svgindex") = window.newSvgIndex;
+          x[i].setAttribute("svgindex", window.newSvgIndex);
           window.newSvgIndex += 1;
         }
         
