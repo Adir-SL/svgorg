@@ -139,14 +139,14 @@
     <div class="artboard"></div>
     <script>
       function reorderFunc(z){
-        // alert(z.getAttribute("svgindex"));
-        window.newSvgIndex = 0;
-        var x = z.parentElement.children;
-        var i;
-        for (i = 0; i < x.length; i++) {
-          x[i].setAttribute("svgindex", window.newSvgIndex);
-          window.newSvgIndex += 1;
-        }
+        alert(z.outerHTML);
+        // window.newSvgIndex = 0;
+        // var x = z.parentElement.children;
+        // var i;
+        // for (i = 0; i < x.length; i++) {
+        //   x[i].setAttribute("svgindex", window.newSvgIndex);
+        //   window.newSvgIndex += 1;
+        // }
         
       }
       function upLayer(e){
