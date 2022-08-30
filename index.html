@@ -140,6 +140,7 @@
     <script>
       function reorderFunc(z){
         alert(z.outerHTML);
+        window.z = z;
         // window.newSvgIndex = 0;
         // var x = z.parentElement.children;
         // var i;
@@ -156,8 +157,9 @@
         tempChild = e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML;
         e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")].outerHTML = e.target.parentElement.parentElement.outerHTML;
         e.target.parentElement.parentElement.outerHTML = tempChild;
-        reorderFunc(e.target.parentElement.parentElement);
-        // console.log(e.target.parentElement.parentElement.parentElement.children[]);
+        e.target.parentElement.parentElement.setAttribute("svgindex", e.target.parentElement.parentElement.getAttribute("svgindex")-1);
+        // reorderFunc(e.target.parentElement.parentElement);
+        // console.log(e.target.parentElement.parentElement.getAttribute("svgindex")-1);
       }
       function downLayer(e){
         console.log(e.target.parentElement.parentElement);
