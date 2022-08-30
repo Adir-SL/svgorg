@@ -138,11 +138,6 @@
     </div>
     <div class="artboard"></div>
     <script>
-      function reorderFunc(x,y){
-        alert(x.getAttribute("svgIndex"));
-        alert(y.getAttribute("svgIndex"));
-      }
-      
       function upLayer(e){
         console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
