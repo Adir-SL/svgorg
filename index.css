@@ -528,7 +528,7 @@ svg g:hover{
     border: none;
 }
 #realCode div:hover, #realCode summary:hover{
-    background-color: #fff0f8;
+    background-color: #fbe4f0;
     border-radius: 4px;
 }
 .flexDiv{
