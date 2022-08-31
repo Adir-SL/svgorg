@@ -545,6 +545,10 @@ svg g:hover{
     outline: none;
     border: none;
     border-radius: 50%;
+    visibility: hidden;
+}
+#realCode div:hover .downBtn, #realCode div:hover .upBtn, #realCode summary:hover .downBtn, #realCode summary:hover .upBtn{
+    visibility: visible;
 }
 .upBtn{
     background-image: url(img/chevUp.svg);
