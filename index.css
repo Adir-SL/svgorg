@@ -526,6 +526,9 @@ svg g:hover{
     outline: none;
     border: none;
 }
+#realCode div:hover, #realCode summary:hover{
+    background-color: hotpink;
+}
 .flexDiv{
     display: flex;
 }
