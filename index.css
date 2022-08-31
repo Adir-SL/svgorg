@@ -509,7 +509,7 @@ svg g:hover{
     justify-content: flex-start;
     /* border-top: 1px solid #EBEEFE; */
     color: #9fa1ac;
-    padding: 0 4px;
+    padding-left: 4px;
     /* border-bottom: 1px solid #EBEEFE; */
 }
 #realCode b{
