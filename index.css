@@ -509,6 +509,7 @@ svg g:hover{
     justify-content: flex-start;
     /* border-top: 1px solid #EBEEFE; */
     color: #9fa1ac;
+    padding: 0 4px;
     /* border-bottom: 1px solid #EBEEFE; */
 }
 #realCode b{
@@ -527,7 +528,8 @@ svg g:hover{
     border: none;
 }
 #realCode div:hover, #realCode summary:hover{
-    background-color: hotpink;
+    background-color: #fff0f8;
+    border-radius: 4px;
 }
 .flexDiv{
     display: flex;
