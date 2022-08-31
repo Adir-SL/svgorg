@@ -153,9 +153,18 @@
         
       }
       function upLayer(e){
-        
+
         window.tempSVG = e.target.parentElement.parentElement.parentElement;
         window.testLayer = e.target.parentElement.parentElement;
+        if(window.tempSVG.tagName == "details"){}
+
+        if(e.target.parentElement.parentElement.parentElement.tagName == "details" || e.target.parentElement.parentElement.parentElement.tagName == "DETAILS"){
+          window.tempSVG = e.target.parentElement.parentElement.parentElement.parentElement;
+          window.testLayer = e.target.parentElement.parentElement.parentElement;
+        }else{
+          window.tempSVG = e.target.parentElement.parentElement.parentElement;
+          window.testLayer = e.target.parentElement.parentElement;
+        }
         
         tempChild = window.tempSVG.children[window.testLayer.getAttribute("svgindex")].outerHTML;
         window.tempSVG.children[window.testLayer.getAttribute("svgindex")].outerHTML = window.testLayer.outerHTML;
