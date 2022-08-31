@@ -510,7 +510,9 @@ svg g:hover{
     /* border-top: 1px solid #EBEEFE; */
     color: #9fa1ac;
     padding-left: 4px;
-    /* border-bottom: 1px solid #EBEEFE; */
+}
+#realCode summary{
+    border-bottom: 1px solid #EBEEFE;
 }
 #realCode b{
     color: #000000;
