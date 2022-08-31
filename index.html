@@ -171,6 +171,10 @@
         
         window.tempSVG = e.target.parentElement.parentElement.parentElement;
         window.testLayer = e.target.parentElement.parentElement;
+        if(window.testLayer.tagName == "SUMMARY"){
+          window.tempSVG = e.target.parentElement.parentElement.parentElement.parentElement;
+          window.testLayer = e.target.parentElement.parentElement.parentElement;
+        }
         
         tempChild = window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
         window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = window.testLayer.outerHTML;
