@@ -555,6 +555,7 @@ svg g:hover{
     outline: none;
     border: none;
     border-radius: 50%;
+    transform: scale(.7);
     visibility: hidden;
 }
 #realCode div:hover .downBtn, #realCode div:hover .upBtn, #realCode summary:hover .downBtn, #realCode summary:hover .upBtn{
