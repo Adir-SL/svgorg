@@ -511,9 +511,9 @@ svg g:hover{
     color: #9fa1ac;
     padding-left: 4px;
 }
-#realCode details > details:last-child{
+/* #realCode details > details:last-child{
     border-bottom: 1px solid #EBEEFE;
-}
+} */
 #realCode b{
     color: #000000;
 }
