@@ -145,8 +145,10 @@
         var x = z.children;
         var i;
         for (i = 0; i < x.length; i++) {
-          x[i].setAttribute("svgindex", window.newSvgIndex);
-          window.newSvgIndex += 1;
+          if(x[i].tagName !== "summary" && x[i].tagName !== "SUMMARY"){
+            x[i].setAttribute("svgindex", window.newSvgIndex);
+            window.newSvgIndex += 1;
+          }
         }
         
       }
