@@ -153,10 +153,10 @@
         
       }
       function upLayer(e){
+        
         window.tempSVG = e.target.parentElement.parentElement.parentElement;
-        // console.log(e.target.parentElement.parentElement);
         window.testLayer = e.target.parentElement.parentElement;
-        // console.log(e.target.parentElement.parentElement.parentElement.children[window.testLayer.getAttribute("svgindex")]);
+        
         tempChild = window.tempSVG.children[window.testLayer.getAttribute("svgindex")].outerHTML;
         window.tempSVG.children[window.testLayer.getAttribute("svgindex")].outerHTML = window.testLayer.outerHTML;
         window.testLayer.outerHTML = tempChild;
@@ -164,10 +164,10 @@
         reorderFunc(window.tempSVG);
       }
       function downLayer(e){
-        // console.log(e.target.parentElement.parentElement);
+        
         window.tempSVG = e.target.parentElement.parentElement.parentElement;
         window.testLayer = e.target.parentElement.parentElement;
-        // console.log(e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2]);
+        
         tempChild = window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
         window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = window.testLayer.outerHTML;
         window.testLayer.outerHTML = tempChild;
