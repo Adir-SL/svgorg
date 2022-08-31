@@ -168,9 +168,9 @@
         window.tempSVG = e.target.parentElement.parentElement.parentElement;
         window.testLayer = e.target.parentElement.parentElement;
         // console.log(e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2]);
-        tempChild = e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
-        e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = e.target.parentElement.parentElement.outerHTML;
-        e.target.parentElement.parentElement.outerHTML = tempChild;
+        tempChild = window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
+        window.tempSVG.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML = window.testLayer.outerHTML;
+        window.testLayer.outerHTML = tempChild;
         
         reorderFunc(window.tempSVG);
       }
