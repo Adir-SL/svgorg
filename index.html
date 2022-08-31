@@ -141,13 +141,13 @@
       function reorderFunc(z){
         alert(z.outerHTML);
         window.z = z;
-        // window.newSvgIndex = 0;
-        // var x = z.parentElement.children;
-        // var i;
-        // for (i = 0; i < x.length; i++) {
-        //   x[i].setAttribute("svgindex", window.newSvgIndex);
-        //   window.newSvgIndex += 1;
-        // }
+        window.newSvgIndex = 0;
+        var x = z.children;
+        var i;
+        for (i = 0; i < x.length; i++) {
+          x[i].setAttribute("svgindex", window.newSvgIndex);
+          window.newSvgIndex += 1;
+        }
         
       }
       function upLayer(e){
