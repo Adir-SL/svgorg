@@ -165,6 +165,7 @@
       }
       function downLayer(e){
         // console.log(e.target.parentElement.parentElement);
+        window.tempSVG = e.target.parentElement.parentElement.parentElement;
         window.testLayer = e.target.parentElement.parentElement;
         // console.log(e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2]);
         tempChild = e.target.parentElement.parentElement.parentElement.children[eval(window.testLayer.getAttribute("svgindex"))+2].outerHTML;
